@@ -1,4 +1,4 @@
-# Big Data Analytics
+# Big Data Analytics (Marius)
 
 ## Course materials for Part I
 
