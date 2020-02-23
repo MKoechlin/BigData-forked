@@ -20,6 +20,7 @@ library(knitr)
 
 ------
 
+
 ```{r whatis, echo=FALSE, out.width = "50%", fig.align='center', purl=FALSE}
 include_graphics("../img/01_what_is.jpg")
 ```
