@@ -1,3 +1,7 @@
+#'Efficient estimator is the estimator that needs the less data and has the same properties
+#'
+#'
+#'
 ## ------------------------------------------------------------------------
 # read dataset into R
 economics <- read.csv("../data/economics.csv")
