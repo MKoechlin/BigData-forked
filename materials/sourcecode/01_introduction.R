@@ -1,6 +1,14 @@
 #'Efficient estimator is the estimator that needs the less data and has the same properties
+#'Sometimmes it is not necessary to use the entire dataset to estimate the effect
+#'so you can save data
+#'Montte Carlo: use computers to estimate e.g. an OLS
+#'estimate y while setting beta yourself! then use simulated data and draw ranndom samples
+#'then use another estimator and compare the results in terms of efficiency etc
+#'(computation time) and compare the estimated beta to the real beta that you set before
+#'inn the end we can estimate the intercept y
 #'
-#'
+#'Adding a big L behind something, tells are that the number is an integer and not
+#'a flow number.
 #'
 ## ------------------------------------------------------------------------
 # read dataset into R
