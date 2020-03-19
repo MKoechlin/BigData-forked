@@ -1,0 +1,8 @@
+new("big.matrix.descriptor", description = list(sharedType = "FileBacked", 
+    filename = "flights.bin", dirname = "/Users/marius/OneDrive - Universität St.Gallen/UNI/Master/MiQE_F/FS2020/Big Data (D)/BigData-forked/", 
+    totalRows = 336776L, totalCols = 19L, rowOffset = c(0, 336776
+    ), colOffset = c(0, 19), nrow = 336776, ncol = 19, rowNames = NULL, 
+    colNames = c("year", "month", "day", "dep_time", "sched_dep_time", 
+    "dep_delay", "arr_time", "sched_arr_time", "arr_delay", "carrier", 
+    "flight", "tailnum", "origin", "dest", "air_time", "distance", 
+    "hour", "minute", "time_hour"), type = "integer", separated = FALSE))

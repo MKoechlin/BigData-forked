@@ -16,7 +16,7 @@ options(fftempdir = "ffdf")
 ## ------------------------------------------------------------------------
 mem_change(
 flights <- 
-     read.table.ffdf(file="../data/flights.csv",
+     read.table.ffdf(file="materials/data/flights.csv",
                      sep=",",
                      VERBOSE=TRUE,
                      header=TRUE,
@@ -24,12 +24,16 @@ flights <-
                      colClasses=NA)
 )
 
+#' MB used might also be negative since other processes are not done again e.g.
+#' key msg is, that the process is not using a lot of space
+
 ## ------------------------------------------------------------------------
 # show the files in the directory keeping the chunks
 list.files("ffdf")
 
 # investigate the structure of the object created in the R environment
 str(flights)
+summary(flights)
 
 
 ## ------------------------------------------------------------------------
@@ -37,18 +41,18 @@ str(flights)
 # SET UP ----------------
 
 # load packages
-library(bigmemory)
+library(bigmemory) # with this package always work with matrices!
 library(biganalytics)
 
 # import the data
-flights <- read.big.matrix("../data/flights.csv",
-                     type="integer",
+flights <- read.big.matrix("materials/data/flights.csv",
+                     type="integer", #everything is coerced to natural numbers
                      header=TRUE,
-                     backingfile="flights.bin",
-                     descriptorfile="flights.desc")
+                     backingfile="flights.bin", #backingfile contains binary file (like above)
+                     descriptorfile="flights.desc") #
 
 ## ------------------------------------------------------------------------
-summary(flights)
+summary(flights) #many NAs for e.g. tailnum, since those were strings
 
 ## ------------------------------------------------------------------------
 
@@ -64,9 +68,9 @@ library(ff)
 library(ffbase)
 library(pryr)
 
-# fix vars
-FLIGHTS_DATA <- "../code_book/B05396_Ch03_Code/flights_sep_oct15.txt"
-AIRLINES_DATA <- "../code_book/B05396_Ch03_Code/airline_id.csv"
+# fix vars ( working from the root directory)
+FLIGHTS_DATA <- "materials/code_book/B05396_Ch03_Code/flights_sep_oct15.txt"
+AIRLINES_DATA <- "materials/code_book/B05396_Ch03_Code/airline_id.csv"
 
 
 ## ------------------------------------------------------------------------
